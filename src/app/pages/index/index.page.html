@@ -1,23 +1,47 @@
 <ion-header>
   <ion-toolbar>
+
+   <ion-buttons slot="start">
+     <ion-back-button defaultHref="/"></ion-back-button>
+   </ion-buttons>
+
     <ion-title>INICIO</ion-title>
+
+      <ion-button slot="end">     
+        <ion-button (click)="toggleMenu()">
+          <ion-icon slot="icon-only" name="menu"></ion-icon>
+        </ion-button>
+    </ion-button>
   </ion-toolbar>
 </ion-header>
 
+
+
+
 <ion-content>
-  <ion-segment color="danger"  scrollable>
-    <ion-segment-button checked layout="icon-end">
-      <ion-icon name="pin"></ion-icon>
-      <ion-label>Mapa</ion-label>
-    </ion-segment-button>
-    <ion-segment-button layout="icon-end">
-      <ion-icon name="beer"></ion-icon>
-      <ion-label>Licos</ion-label>
-    </ion-segment-button>
-    <ion-segment-button layout="icon-end">
-      <ion-icon name="Person"></ion-icon>
-      <ion-label>Usuario</ion-label>
-    </ion-segment-button>
-  </ion-segment>
+<ion-row>
+  <ion-col >
+      <ion-button (click)="onClick()" >
+          Mapa
+        <ion-icon  name="pin"></ion-icon>
+      </ion-button>
+  </ion-col>
+  <ion-col >
+      <ion-button (click)="onClick()">
+          Licos 
+        <ion-icon  name="beer"></ion-icon>
+      </ion-button>
+  </ion-col>
+  <ion-col >
+      <ion-button (click)="onClick()">
+          Pedidos
+        <ion-icon  name="clipboard"></ion-icon>
+      </ion-button>
+  </ion-col>
+</ion-row>
+
+  
+ 
+  
 
  </ion-content>
