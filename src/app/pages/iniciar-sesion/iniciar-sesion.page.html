@@ -5,56 +5,27 @@
 </ion-header>
 
 <ion-content>
-  <form onsubmit="processForm(event)">
-    <ion-list lines="full" class="ion-no-margin ion-no-padding">
-      
+    <form onsubmit="processForm(event)">
+        <ion-list lines="full" class="ion-no-margin ion-no-padding">
+          <ion-item>
+            <ion-label position="stacked">Correo <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" oninput="handleFirstNameValue(event)"></ion-input>
+          </ion-item>
 
-      <ion-item>
-        <ion-label position="stacked">Correo</ion-label>
-        <ion-input placeholder=" ejemplo@.com"></ion-input>
-        <ion-input required type="text" oninput="handleCorreoValue(event)"></ion-input>      
-      </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Password <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" oninput="handleLastNameValue(event)"></ion-input>
+          </ion-item>
+          
+         </ion-list>
 
-      <ion-item>
-        <ion-label position="stacked">Contra</ion-label>
-        <ion-input type=password placeholder="********"></ion-input>
-        <ion-input required type="text" oninput="handlecontraValue(event)"></ion-input>
-      </ion-item>
+        <div class="ion-padding">
+          <ion-button expand="block" type="submit" class="ion-no-margin">Iniciar Sesion</ion-button>
+        </div>
+        
+        <div class="ion-padding" >
+            <ion-button expand="block" type="submit" class="ion-no-margin">Crear Cuenta</ion-button>
+          </div>
 
-      <ion-item>
-        <ion-label position="stacked">Notes</ion-label>
-        <ion-textarea></ion-textarea>
-      </ion-item>
-    </ion-list>
-
-    <div class="ion-padding">
-      <ion-button expand="block" type="submit" class="ion-no-margin">Create account</ion-button>
-    </div>
-  </form>
-
-
-  <script>
-    const controller = document.querySelector('ion-alert-controller');
-    let Correo, Contra;
-    function processForm(event) {
-      event.preventDefault();
-      controller.create({
-        header: 'Account Created',
-        message: `Created account for: <b>${Correo} ${Contra}</b>`,
-        buttons: [{
-          text: 'OK'
-        }]
-      }).then(alert => alert.present());
-    }
-    function handleCorreoValue(event) {
-      firstName = event.target.value;
-    }
-    function handlecontradValue(event) {
-      Password = event.target.value;
-    }
-  </script>
-
-
+      </form>
 </ion-content>
-
-

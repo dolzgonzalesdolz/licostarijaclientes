@@ -5,5 +5,49 @@
 </ion-header>
 
 <ion-content>
+    <form onsubmit="processForm(event)">
+        <ion-list lines="full" class="ion-no-margin ion-no-padding">
+            
+          <ion-item>
+            <ion-label position="stacked">Correo <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" oninput="handleCorreoValue(event)"></ion-input>
+          </ion-item>
 
+          <ion-item>
+            <ion-label position="stacked">Password <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="Password" oninput="handlePasswordValue(event)"></ion-input>
+          </ion-item>
+
+          <ion-item>
+              <ion-label position="stacked">Confirmar Password <ion-text color="danger">*</ion-text></ion-label>
+              <ion-input required type="Password" oninput="handleConfirmarpasswordValue(event)"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="stacked">Nombre <ion-text color="danger">*</ion-text></ion-label>
+                <ion-input required type="text" oninput="handleNombreValue(event)"></ion-input>
+              </ion-item>
+    
+              <ion-item>
+                <ion-label position="stacked">Apellidos<ion-text color="danger">*</ion-text></ion-label>
+                <ion-input required type="text" oninput="handleApellidosValue(event)"></ion-input>
+              </ion-item>
+    
+              <ion-item>
+                  <ion-label position="stacked">Telefono <ion-text color="danger">*</ion-text></ion-label>
+                  <ion-input required type="text" oninput="handleConfirmarTelefonoValue(event)"></ion-input>
+                </ion-item>
+          
+         </ion-list>
+
+         <section>
+            
+            <ion-button color="success">Guardar</ion-button>
+            <ion-button color="danger">Cancelar</ion-button>
+            
+          </section>
+
+        
+
+      </form>
 </ion-content>
